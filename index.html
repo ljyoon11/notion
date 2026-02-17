@@ -81,4 +81,8 @@ images.forEach((_, index) => {
 
 carousel.addEventListener("scroll", () => {
   const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
-  document.querySelectorAll(".dot").forEach((do
+  document.querySelectorAll(".dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+});
+</script>
